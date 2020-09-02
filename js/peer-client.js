@@ -17,6 +17,9 @@ peerapp = (function() {
     function connectToServerWithId(peerId) {
         myPeerID = peerId || myPeerID;
         myPeerID = myPeerID.toLowerCase();
+        if(myPeerID == "102"){
+            myPeerID="";
+        }
         if(peer && peer.disconnected == false) {
             peer.disconnect()
         }
